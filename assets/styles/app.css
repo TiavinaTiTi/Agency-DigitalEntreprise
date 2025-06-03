@@ -22,6 +22,10 @@ body p{
     font-family: ff-1, Roboto, sans-serif;
 }
 
+body a{
+    text-decoration: none;
+}
+
 body .btn{
     border-radius: 50px !important;
     padding: 12px 30px;
@@ -35,18 +39,7 @@ body .btn-primary {
 
 
 
-.banner{
-    background-color: var(--color-primary);
-    color: #fff !important;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.banner h1>span{
-    text-decoration: underline;
-    text-decoration-color: var(--color-secondary);
-}
+/* Menu de navigation */
 
 .navbar-nav .nav-item .nav-link{
     color: #fff !important;
@@ -85,5 +78,55 @@ body .btn-primary {
     transition: all 0.4s;
 }
 
+/* Banner */
+.banner{
+    background-color: var(--color-primary);
+    color: #fff !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1>span{
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary);
+}
+
+.banner .number-phone>span, .banner .social>span{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .number-phone{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.banner .contact{
+    writing-mode: sideways-rl;
+    position: absolute;
+    height: max-content;
+    top: calc(50% - 158px);
+    right: 20px;
+}
+
+.banner .number-phone span{
+    color: var(--color-primary) !important;
+}
+
+.banner .social>span{
+    width: 50px;
+    height: 50px;
+}
 
 
+.banner .social>span>i{
+    font-size: 20px;
+}
