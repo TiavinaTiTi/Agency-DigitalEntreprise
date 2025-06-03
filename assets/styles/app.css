@@ -1,3 +1,89 @@
-body {
-    background-color: skyblue;
+:root{
+    --color-primary: #15186c;
+    --color-secondary: #42e8e0;
+
 }
+
+@font-face {
+    font-face-name: ff-1;
+    src: url("assets/styles/fonts/LexendDeca-VariableFont_wght.ttf");
+}
+
+/* GLOBALE */
+
+body h1{
+    font-size: 65px;
+    font-weight: 700;
+    font-family: ff-1, Roboto, sans-serif;
+}
+
+body p{
+    font-size: 18px;
+    font-family: ff-1, Roboto, sans-serif;
+}
+
+body .btn{
+    border-radius: 50px !important;
+    padding: 12px 30px;
+}
+
+body .btn-primary {
+    color: var(--color-primary) !important;
+    background-color: var(--color-secondary) !important;
+}
+
+
+
+
+.banner{
+    background-color: var(--color-primary);
+    color: #fff !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1>span{
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary);
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: #fff !important;
+}
+
+.navbar-nav .nav-item .nav-link.active, .navbar-nav .nav-item .nav-link{
+    position: relative;
+}
+.navbar-nav .nav-item .nav-link::before{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.4s;
+}
+.navbar-nav .nav-item:not(:last-child) .nav-link:hover::before{
+    width: 100%;
+}
+.nav-item:last-child .nav-link{
+    background: #ffffff0f;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-item .nav-link.active::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.4s;
+}
+
+
+

@@ -1,0 +1,25 @@
+{% extends 'base-template.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <section class="banner">
+        <div class="container">
+            <div class="row row-cols-lg-2 align-items-center">
+                <div class="col">
+                    <h1><span>Brand new</span> way <br> of sending</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolorem eius laborum minima officiis, soluta tenetur.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Dolorem eius laborum minima officiis, soluta tenetur.
+                    </p>
+                    <a href="#" class="btn btn-lg btn-primary mt-2">Learn How</a>
+                </div>
+                <div class="col">
+                    <img src="{{ asset("images/digitalisation.png") }}" alt="Entreprise de digitale" srcset="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
