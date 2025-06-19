@@ -1,0 +1,110 @@
+{% extends 'base-template.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </section>
+    <section class="section-content" id="page-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col col-8">
+                    <div class="card border-0 shadow-sm rounded-0">
+                        <div class="card-body">
+                            <h2>Formulaire de contact</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis ut voluptatem. Harum repellat, similique.</p>
+                            <div class="form-contact">
+                                {{ form_start(form) }}
+                                    <div class="row row-col-2 mb-2">
+                                        <div class="col">
+                                            <div class="form-floating">
+                                                {{ form_widget(form.firstName) }}
+                                                {{ form_label(form.firstName) }}
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-floating">
+                                                {{ form_widget(form.lastName) }}
+                                                {{ form_label(form.lastName) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-col-2 mb-2">
+                                        <div class="col">
+                                            <div class="form-floating mb-2">
+                                                {{ form_widget(form.phone) }}
+                                                {{ form_label(form.phone) }}
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-floating mb-2">
+                                                {{ form_widget(form.email) }}
+                                                {{ form_label(form.email) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-2">
+                                        {{ form_widget(form.message) }}
+                                        {{ form_label(form.message) }}
+                                    </div>
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" value="remember-me"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        </label>
+                                    </div>
+                                    {{ form_row(form.save) }}
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light-subtle border-0 rounded-0">
+                        <div class="card-body">
+                            <h2>Nos contact</h2>
+                            <div class="card mb-2 rounded-0 border-0 border-start border-2">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <span class="me-2">
+                                            <i class="bi-telephone"></i>
+                                        </span>
+                                        <div class="">
+                                            <div class="">+261 34 00 000 00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-2 rounded-0 border-0 border-start border-2">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <span class="me-2">
+                                            <i class="bi-geo-alt"></i>
+                                        </span>
+                                        <div class="">
+                                            <div class="">Antananarivo Madagascar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card rounded-0 border-0 border-start border-2">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <span class="me-2">
+                                            <i class="bi-envelope"></i>
+                                        </span>
+                                        <div class="">
+                                            <div class="">digital@entreprise.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

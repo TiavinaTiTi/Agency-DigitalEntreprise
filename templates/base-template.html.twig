@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Menu de navigation">
         <div class="container">
             <a class="navbar-brand" href="#">
-                Digital<i class="bi-headset-vr"></i>Entreprise
+                Digital<i class="bi-headset-vr"></i>Enterprise
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link {{ app.current_route == 'home.index' ? 'active' : '' }}" aria-current="page" href="{{ path("home.index") }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="#">Chat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link {{ app.current_route == 'contact.index' ? 'active' : '' }}" href="{{ path("contact.index") }}">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -49,5 +49,79 @@
     <main>
         {% block body %}{% endblock %}
     </main>
+    <footer class="bg-black text-white {{ app.current_route == 'home.index' ? 'd-none' : '' }}">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-3">
+                <a href="" class="btn border border-2 border-light text-light btn-sm d-flex justify-content-center align-items-center rounded-pill fw-semibold" style="width: 40px; height: 40px;">
+                    <i class="bi-facebook fs-6"></i>
+                </a>
+                <a href="" class="btn border border-2 border-light text-light btn-sm d-flex justify-content-center align-items-center rounded-pill fw-semibold" style="width: 40px; height: 40px;">
+                    <i class="bi-instagram fs-6"></i>
+                </a>
+                <a href="" class="btn border border-2 border-light text-light btn-sm d-flex justify-content-center align-items-center rounded-pill fw-semibold" style="width: 40px; height: 40px;">
+                    <i class="bi-twitter fs-6"></i>
+                </a>
+                <a href="" class="btn border border-2 border-light text-light btn-sm d-flex justify-content-center align-items-center rounded-pill fw-semibold" style="width: 40px; height: 40px;">
+                    <i class="bi-github fs-6"></i>
+                </a>
+            </div>
+            <div class="mt-4 d-flex flex-column align-items-center">
+                <div class="text-red fs-3 ff-sacramento">Digital<i class="bi-headset-vr"></i>Enterprise</div>
+                <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+                    <a href="" class="text-decoration-none text-light fw-semibold">
+                        <i class="bi-house"></i>
+                        Digital Enterprise
+                    </a>
+                    <a href="" class="text-decoration-none text-light fw-semibold">
+                        <i class="bi-envelope"></i>
+                        address&#64;gmail.com
+                    </a>
+                    <a href="" class="text-decoration-none text-light fw-semibold">
+                        <i class="bi-geo-alt"></i>
+                        Antananarivo</a>
+                    <a href="" class="text-decoration-none text-light fw-semibold">
+                        <i class="bi-telephone"></i>
+                        +261 33 00 000 00</a>
+                </div>
+                <div class="text-secondary mt-2 text-center">© Copyright - <b>Cree par Digital entreprise</b> - Creation de site web</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('nav.navbar');
+
+            if (!navbar) {
+                console.error('Élément .navbar introuvable.');
+                return;
+            }
+
+            const initPosition = navbar.getBoundingClientRect().top;
+            function changeToScroll() {
+                const currentPosition = window.scrollY;
+                console.log(initPosition + " / " + currentPosition);
+
+                if (currentPosition > initPosition) {
+                    /*if(navbar.classList.contains('navbar-dark')){
+                        navbar.classList.replace('navbar-dark', 'navbar-light');
+                        navbar.classList.replace('bg-transparent', 'bg-light');
+                    }*/
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    /*if(navbar.classList.contains('navbar-light')){
+                        navbar.classList.replace('navbar-light', 'navbar-dark');
+                        navbar.classList.replace('bg-light', 'bg-transparent');
+                    }*/
+                }
+            }
+
+            // Attacher l'événement "scroll" de manière performante
+            window.addEventListener('scroll', changeToScroll, { passive: true });
+        });
+    </script>
+
+
 </body>
 </html>

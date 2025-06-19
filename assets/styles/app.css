@@ -1,12 +1,13 @@
 :root{
     --color-primary: #15186c;
-    --color-secondary: #42e8e0;
-
+    --color-secondary: #ffc107;
+    --color-dark: #212529;
+    --color-dark-2: #1c1f23;
 }
 
 @font-face {
     font-face-name: ff-1;
-    src: url("assets/styles/fonts/LexendDeca-VariableFont_wght.ttf");
+    src: url('assets/styles/fonts/LexendDeca-VariableFont_wght.ttf');
 }
 
 /* GLOBALE */
@@ -26,24 +27,57 @@ body a{
     text-decoration: none;
 }
 
-body .btn{
-    border-radius: 50px !important;
+body .banner .btn{
+    border-radius: 0 !important;
     padding: 12px 30px;
 }
 
 body .btn-primary {
-    color: var(--color-primary) !important;
+    color: var(--color-dark) !important;
     background-color: var(--color-secondary) !important;
+    border: none;
+}
+
+@media screen and (min-width: 981px){
+    section.section-content{
+        padding: 80px 0;
+    }
+    footer{
+        padding: 60px 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 980px){
+    section.section-content{
+        padding: 60px 0;
+    }
 }
 
 
 
 
 /* Menu de navigation */
-
-.navbar-nav .nav-item .nav-link{
-    color: #fff !important;
+.navbar{
+    padding: 20px 0;
+    transition: all 0.4s;
 }
+.navbar.scrolled{
+    padding: 10px 0;
+    transition: all 0.4s;
+    background-color: var(--color-dark-2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.15);
+}
+.navbar:hover{
+    background-color: var(--color-dark-2);
+}
+.navbar:hover .nav-item:last-child .nav-link{
+    background-color: var(--color-secondary);
+    color: var(--color-dark-2);
+}
+/*.navbar-nav .nav-item .nav-link{*/
+/*    color: #fff !important;*/
+/*}*/
 
 .navbar-nav .nav-item .nav-link.active, .navbar-nav .nav-item .nav-link{
     position: relative;
@@ -61,9 +95,14 @@ body .btn-primary {
 .navbar-nav .nav-item:not(:last-child) .nav-link:hover::before{
     width: 100%;
 }
+
+.navbar.scrolled .nav-item:last-child .nav-link{
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
 .nav-item:last-child .nav-link{
     background: #ffffff0f;
-    border-radius: 50px;
+    border-radius: 0;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -79,8 +118,21 @@ body .btn-primary {
 }
 
 /* Banner */
+.banner::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('../images/bg-dg.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.1);
+}
+
 .banner{
-    background-color: var(--color-primary);
+    position: relative;
     color: #fff !important;
     min-height: 100vh;
     display: flex;
@@ -95,11 +147,14 @@ body .btn-primary {
 .banner .number-phone>span, .banner .social>span{
     width: 30px;
     height: 30px;
-    background-color: #fff;
-    border-radius: 100%;
+    background-color: var(--color-dark-2);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.banner .number-phone>span{
+    background-color: var(--color-secondary);
 }
 
 .banner .number-phone{
@@ -107,6 +162,10 @@ body .btn-primary {
     align-items: center;
     gap: 10px;
     color: #fff;
+}
+
+.banner .number-phone span>i{
+    color: var(--color-dark) !important;
 }
 
 .banner .contact{
@@ -117,9 +176,6 @@ body .btn-primary {
     right: 20px;
 }
 
-.banner .number-phone span{
-    color: var(--color-primary) !important;
-}
 
 .banner .social>span{
     width: 50px;
@@ -129,4 +185,61 @@ body .btn-primary {
 
 .banner .social>span>i{
     font-size: 20px;
+    color: #fff;
 }
+
+.banner img.img-move{
+
+    animation: 2.5s ease-in-out infinite zoom;
+}
+
+
+@keyframes zoom {
+    0%{
+        scale: 1;
+        transition: all 0.4s;
+    }
+    50%{
+        scale: 1.1;
+        transition: all 0.4s;
+    }
+    75%{
+        scale: 1;
+        transition: all 0.4s;
+    }
+}
+
+
+
+/* Page contact */
+.hero{
+    height: 400px;
+    /*background-color: var(--color-primary);*/
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.hero::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-dg.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.1);
+}
+.hero h1{
+    color: #fff;
+}
+#page-contact .form-contact input.form-control, #page-contact textarea{
+    border-radius: 0 !important;
+}
+#page-contact .form-contact .btn{
+    border-radius: 0 !important;
+}
+
+
+
