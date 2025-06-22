@@ -5,7 +5,9 @@ namespace App\Form;
 use App\DTO\ContactDTO;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -46,7 +48,13 @@ class ContactType extends AbstractType
                     'placeholder' => 'Saisir votre message...'
                 ]
             ])
-            ->add('save', ButtonType::class,[
+//            ->add('condition', CheckboxType::class, [
+//                'empty_data' => false,
+//                'attr' => [
+//                    'label' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+//                ]
+//            ])
+            ->add('save', SubmitType::class,[
                 'attr' => [
                     'class' => 'btn-dark w-100',
                 ],
