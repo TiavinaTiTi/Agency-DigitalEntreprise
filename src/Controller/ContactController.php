@@ -18,8 +18,8 @@ class ContactController extends AbstractController
     #[Route('/contact', name: 'contact.index')]
     public function index(Request $request, MailerInterface $mailer): Response
     {
+//        $this->denyAccessUnlessGranted('ROLE_USER');
         $EMAIL_SITE = 'digital@entreprise.com';
-
         $data = new ContactDTO();
         $form = $this->createForm(ContactType::class, $data);
         $form->handleRequest($request);

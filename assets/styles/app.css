@@ -38,6 +38,10 @@ body .btn-primary {
     border: none;
 }
 
+body .bg-dark-2 {
+    background-color: var(--color-dark-2) !important;
+}
+
 @media screen and (min-width: 981px){
     section.section-content{
         padding: 80px 0;
@@ -234,12 +238,23 @@ body .btn-primary {
 .hero h1{
     color: #fff;
 }
-#page-contact .form-contact input.form-control, #page-contact textarea{
+#page-contact .form-contact input.form-control, #page-contact textarea, .form-auth input.form-control{
     border-radius: 0 !important;
 }
-#page-contact .form-contact .btn{
+#page-contact .form-contact .btn, .form-auth .btn{
     border-radius: 0 !important;
 }
 
-
+.form-auth input.form-control {
+    background-color: transparent;
+}
+.form-auth .form-floating>*, .form-auth .checkbox>*{
+    color: #fff;
+}
+.form-auth .form-floating>input.form-control:focus ~ label{
+    color: #fff;
+}
+.form-auth .form-floating>input.form-control:focus ~ label::after{
+    background-color: transparent;
+}
 
