@@ -7,10 +7,8 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-2 align-items-center">
                 <div class="col">
-                    <h1><span>Brand new</span> way <br> of sending</h1>
+                    <h1><span>Booster votre visibilité</span> en locale</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Dolorem eius laborum minima officiis, soluta tenetur.
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Dolorem eius laborum minima officiis, soluta tenetur.
                     </p>
@@ -28,7 +26,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img src="{{ asset("images/digitalisation.png") }}" alt="Entreprise de digitale" srcset="" width="100%" class="img-move">
+                    <img src="{{ asset("images/digitalisation.png") }}" alt="Entreprise de digitale" srcset="" width="100%" class="img-move d-none">
                 </div>
             </div>
             <div class="contact d-flex gap-3">
@@ -40,6 +38,106 @@
                     <span class=""><i class="bi-telephone"></i></span>
                     <b>+261 34 00 000 00</b>
                 </a>
+            </div>
+        </div>
+    </section>
+    <section class="section partenariat">
+        <div class="list-slick">
+            {% for i in 0..3 %}
+                <div class="item">
+                    <img src="{{ asset("images/partenariat/brand-1.png") }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ asset("images/partenariat/brand-2.png") }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ asset("images/partenariat/brand-3.png") }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ asset("images/partenariat/brand-4.png") }}" alt="">
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="section service">
+        <div class="container">
+            <h2 class="text-center">Services</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet.</p>
+            
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="fs-1">
+                                <i class="bi-house"></i>
+                            </div>
+                            <h3>Création site</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="section activity">
+        <div class="list-slick">
+            {% for i in 0..3 %}
+                <div class="item">
+                    SEO<span></span>
+                </div>
+                <div class="item">
+                    SEO Local<span></span>
+                </div>
+                <div class="item">
+                    Refonte site<span></span>
+                </div>
+                <div class="item">
+                    Creation site<span></span>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="section cta">
+        <div class="container">
+            <div class="chapo">Contactez-nous</div>
+            <h2>Entrons en contact</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem laborum perspiciatis quasi sapiente.</p>
+            <a href="" class="btn btn-primary">Contactez-Nous</a>
+            <div class="row row-cols-3 follower">
+                <div class="col">
+                    <a href="">
+                        <div class="icon">
+                            <i class="bi-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="">Nous écrire</a>
+                </div>
+                <div class="col">
+                    <a href="">
+                        <div class="icon">
+                            <i class="bi-telephone"></i>
+                        </div>
+                        <h3>Téléphone</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="">Nous appeler</a>
+                </div>
+                <div class="col">
+                    <a href="">
+                        <div class="icon">
+                            <i class="bi-whatsapp"></i>
+                        </div>
+                        <h3>Whatsapp</h3>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="">Lancer une discussion</a>
+                </div>
             </div>
         </div>
     </section>
