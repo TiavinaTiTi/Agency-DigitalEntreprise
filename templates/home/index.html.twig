@@ -7,54 +7,58 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-2 align-items-center">
                 <div class="col">
-                    <h1><span>Booster votre visibilité</span> en locale</h1>
+                    <h1>Booster votre visibilité en locale</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Dolorem eius laborum minima officiis, soluta tenetur.
                     </p>
-                    <a href="#" class="btn btn-lg btn-primary mt-2">Learn How</a>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="" class="social">
-                            <span><i class="bi-facebook"></i></span>
-                        </a>
-                        <a href="" class="social">
-                            <span><i class="bi-linkedin"></i></span>
-                        </a>
-                        <a href="" class="social">
-                            <span><i class="bi-whatsapp"></i></span>
-                        </a>
+                    <a href="#" class="btn btn-lg btn-primary">Learn How</a>
+                    
+                    <div class="shape1">
+                        <img src="{{ asset("images/shapes/shape1.png") }}" alt="Circle">
+                    </div>
+                    <div class="shape2">
+                        <img src="{{ asset("images/shapes/shape2.svg") }}" alt="Circle">
+                    </div>
+                    <div class="shape3">
+                        <img src="{{ asset("images/shapes/shape3.svg") }}" alt="Circle">
+                    </div>
+                    <div class="shape4">
+                        <img src="{{ asset("images/shapes/shape4.svg") }}" alt="Circle">
+                    </div>
+                    <div class="shape5">
+                        <img src="{{ asset("images/shapes/shape5.png") }}" alt="Circle">
+                    </div>
+                    <div class="shape6">
+                        <img src="{{ asset("images/shapes/shape4.svg") }}" alt="Circle">
+                    </div>
+                    <div class="shape7">
+                        <img src="{{ asset("images/shapes/shape4.svg") }}" alt="Circle">
+                    </div>
+                    <div class="shape8">
+                        <img src="{{ asset("images/shapes/shape2.svg") }}" alt="Circle">
                     </div>
                 </div>
                 <div class="col">
-                    <img src="{{ asset("images/digitalisation.png") }}" alt="Entreprise de digitale" srcset="" width="100%" class="img-move d-none">
+                    <img src="{{ asset("images/service.png") }}" alt="Entreprise de digitale" srcset="" width="100%" class="d-none">
                 </div>
-            </div>
-            <div class="contact d-flex gap-3">
-                <a href="" class="number-phone">
-                    <span class=""><i class="bi-telephone"></i></span>
-                    <b>+261 34 00 000 00</b>
-                </a>
-                <a href="" class="number-phone">
-                    <span class=""><i class="bi-telephone"></i></span>
-                    <b>+261 34 00 000 00</b>
-                </a>
             </div>
         </div>
     </section>
-    <section class="section partenariat">
+    <section class="section activity">
         <div class="list-slick">
             {% for i in 0..3 %}
                 <div class="item">
-                    <img src="{{ asset("images/partenariat/brand-1.png") }}" alt="">
+                    SEO<span></span>
                 </div>
                 <div class="item">
-                    <img src="{{ asset("images/partenariat/brand-2.png") }}" alt="">
+                    SEO Local<span></span>
                 </div>
                 <div class="item">
-                    <img src="{{ asset("images/partenariat/brand-3.png") }}" alt="">
+                    Refonte site<span></span>
                 </div>
                 <div class="item">
-                    <img src="{{ asset("images/partenariat/brand-4.png") }}" alt="">
+                    Creation site<span></span>
                 </div>
             {% endfor %}
         </div>
@@ -81,24 +85,6 @@
                 <div class="col"></div>
             </div>
             
-        </div>
-    </section>
-    <section class="section activity">
-        <div class="list-slick">
-            {% for i in 0..3 %}
-                <div class="item">
-                    SEO<span></span>
-                </div>
-                <div class="item">
-                    SEO Local<span></span>
-                </div>
-                <div class="item">
-                    Refonte site<span></span>
-                </div>
-                <div class="item">
-                    Creation site<span></span>
-                </div>
-            {% endfor %}
         </div>
     </section>
     <section class="section cta">

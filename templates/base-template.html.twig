@@ -13,26 +13,10 @@
 </head>
 <body>
     <header class="fixed-top">
-        <div class="topbar list-slick d-none">
-            {% for i in 0..3 %}
-                <div class="item">
-                    SEO<span></span>
-                </div>
-                <div class="item">
-                    SEO Local<span></span>
-                </div>
-                <div class="item">
-                    Refonte site<span></span>
-                </div>
-                <div class="item">
-                    Creation site<span></span>
-                </div>
-            {% endfor %}
-        </div>
         <nav class="navbar navbar-expand-lg navbar-light text-color" aria-label="Menu de navigation">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    Digital<i class="bi-headset-vr"></i>Enterprise
+                    <img src="{{ asset("/images/logo.png") }}" alt="Digital Entreprise">
                 </a>
                 <div class="toggle-mobile">
                     <a href="" class="btn btn-primary btn-login">
@@ -55,7 +39,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="bi-person-circle me-1"></i>
                                 Connexion
                             </a>
                         </li>
