@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'contact.index')]
-    public function index(Request $request, ContactMail $contactMailer ): Response
+    public function index(Request $request, ContactMailer $contactMailer ): Response
     {
 //        $this->denyAccessUnlessGranted('ROLE_USER');
         $EMAIL_SITE = 'digital@entreprise.com';
@@ -26,27 +26,13 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             try {
-                /*$mail = (new TemplatedEmail())
-                    ->to($EMAIL_SITE)
-                    ->from($data->email)
-                    ->subject('Message de la page contact '.$data->lastName)
-                    ->htmlTemplate('emails/admin-mail.html.twig')
-                    ->context(['data' => $data]); // Envoyer le data vers template
-                $mailer->send($mail);*/
+                
                 $contactMailer->sendContact($data);
-                // Mail confirmation
-                /*$confirm = (new TemplatedEmail())
-                    ->to($data->email)
-                    ->from($EMAIL_SITE)
-                    ->subject('Merci pour votre message sur notre site')
-                    ->htmlTemplate('emails/confirm-mail.html.twig')
-                    ->context(['site' => $EMAIL_SITE]);
-                $mailer->send($confirm);*/
                 $contactMailer->sendConfirmation($data);
 
                 $this->addFlash('success','Message envoyer avec succees');
             }catch (TransportExceptionInterface $e){
-                $this->addFlash('danger', 'Message n\' est pas envoyer');
+                $this->addFlash('danger', 'Le message n\'a pas pu être envoyé.');
             }
             return $this->redirectToRoute('contact.index');
         }
