@@ -8,6 +8,7 @@
     --color-link: #4a6f8a;
     --color-footer: #07112d;
     --color-section: #f7fafd;
+    --color-banner: linear-gradient(-281.11deg, rgba(72,43,231,1) 0%, rgba(70,37,164,1) 95%);
 }
 
 @font-face {
@@ -185,7 +186,7 @@ footer{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: #5f32e4;
+    background: var(--color-banner);
     /*background-size: 150% auto;*/
     /*background: url("../images/bg-banner.jpg") no-repeat right center;*/
     z-index: 0;
