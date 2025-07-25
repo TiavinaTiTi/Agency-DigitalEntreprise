@@ -31,9 +31,125 @@
             <div class="row row-cols-1 row-cols-lg-4">
                 <div class="col">
                     <div class="item">
-
+                        <div class="content">
+                            <img src="{{ asset("/images/icon-security.png") }}" alt="Web security">
+                            <h3>
+                                <a href="#">Web security</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="content">
+                            <img src="{{ asset("/images/icon-internet.png") }}" alt="Internet security">
+                            <h3>
+                                <a href="#">Internet Security</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="content">
+                            <img src="{{ asset("/images/icon-data-security.png") }}" alt="Data security">
+                            <h3>
+                                <a href="#">Data security</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="content">
+                            <img src="{{ asset("/images/icon-tracker.png") }}" alt="Tracker security">
+                            <h3>
+                                <a href="#">Anti tracker</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section-left">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <img src="{{ asset("/images/section-left.png") }}" alt="section">
+                    {% for i in 0..2 %}
+                        <span class="shape-{{ i }}">
+                            <img src="{{ asset("/images/circle.png") }}" alt="">
+                        </span>
+                    {% endfor %}
+                </div>
+                <div class="col">
+                    <div class="chapo">High Level Security Services</div>
+                    <h2>Latest technology in cyber <span>security</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Nobis saepe sapiente sed unde voluptate voluptatem.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                    <a href="" class="btn btn-primary">Load More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-right">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <div class="chapo">High Level Security Services</div>
+                    <h2>Powerful artificial intelligence Multi-Cloud <span>security</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Nobis saepe sapiente sed unde voluptate voluptatem.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                    <a href="" class="btn btn-primary">Load More</a>
+                </div>
+                <div class="col">
+                    <img src="{{ asset("/images/section-right.png") }}" alt="section">
+                    {% for i in 0..2 %}
+                        <span class="shape-{{ i }}">
+                            <img src="{{ asset("/images/circle.png") }}" alt="">
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="price">
+        <div class="container">
+            <div class="chapo">Pricing plans</div>
+            <h2>Select right Option <br> for <span>you</span></h2>
+            <div class="navigation-tabs">
+                <nav>
+                    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3">
                 <div class="col"></div>
                 <div class="col"></div>
                 <div class="col"></div>
